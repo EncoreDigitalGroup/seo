@@ -1,0 +1,1 @@
+<?phpnamespace EncoreDigitalGroup\SEO\Objects;class Twitter{    public ?string $card;    public ?string $title;    public ?string $site;}

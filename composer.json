@@ -1,0 +1,20 @@
+{
+    "name": "encoredigitalgroup/seo",
+    "description": "Library for Generating SEO Meta Tags and Structured Page Information",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "encoredigitalgroup/stdlib": "self.version",
+        "encoredigitalgroup/foundation": "self.version",
+        "illuminate/collections": "^10|^11",
+        "illuminate/support": "^10|^11"
+    },
+    "autoload": {
+        "psr-4": {
+            "EncoreDigitalGroup\\SEO\\": ""
+        },
+        "files": []
+    },
+    "minimum-stability": "stable",
+    "extra": {}
+}
