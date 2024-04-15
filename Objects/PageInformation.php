@@ -4,10 +4,10 @@ namespace EncoreDigitalGroup\SEO\Objects;
 
 class PageInformation
 {
-    public ?string $title;
-    public ?string $description;
-    public ?string $keywords;
-    public ?string $author;
+    public ?string $title = null;
+    public ?string $description = null;
+    public ?string $keywords = null;
+    public ?string $author = null;
     public ?OpenGraph $openGraph;
     public ?Twitter $twitter;
 
@@ -35,8 +35,7 @@ class PageInformation
 
     public function generateTags(): array
     {
-        $this->prepareData();
-        $this->propagateData();
+        $this->sync();
 
         $tags = [];
 
@@ -95,6 +94,12 @@ class PageInformation
         }
 
         return $tags;
+    }
+
+    public function sync(): void
+    {
+        $this->prepareData();
+        $this->propagateData();
     }
 
     private function prepareData(): void
