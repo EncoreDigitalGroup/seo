@@ -31,6 +31,10 @@ class PageInformation
 
         $this->openGraph = new OpenGraph();
         $this->twitter = new Twitter();
+
+        if (not_null($title) || not_null($description)) {
+            $this->sync();
+        }
     }
 
     public function generateTags(): array
@@ -100,6 +104,22 @@ class PageInformation
     {
         $this->prepareData();
         $this->propagateData();
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+        $this->sync();
+
+        return $this;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+        $this->sync();
+
+        return $this;
     }
 
     private function prepareData(): void
