@@ -5,6 +5,7 @@ namespace EncoreDigitalGroup\SEO\Objects;
 class PageInformation
 {
     public ?string $title = null;
+    public ?string $subtitle = null;
     public ?string $description = null;
     public ?string $keywords = null;
     public ?string $author = null;
