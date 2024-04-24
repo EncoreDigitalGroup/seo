@@ -5,11 +5,17 @@ namespace EncoreDigitalGroup\SEO\Objects;
 class PageInformation
 {
     public ?string $title = null;
+
     public ?string $subtitle = null;
+
     public ?string $description = null;
+
     public ?string $keywords = null;
+
     public ?string $author = null;
+
     public ?OpenGraph $openGraph;
+
     public ?Twitter $twitter;
 
     public function __construct($title = null, $description = null, $keywords = null, $author = null)
@@ -125,7 +131,9 @@ class PageInformation
 
     private function prepareData(): void
     {
-        $this->description = str_max_length($this->description);
+        if (not_null($this->description)) {
+            $this->description = str_max_length($this->description);
+        }
     }
 
     private function propagateData(): void

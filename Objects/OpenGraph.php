@@ -5,14 +5,23 @@ namespace EncoreDigitalGroup\SEO\Objects;
 class OpenGraph
 {
     public ?string $title = null;
+
     public ?string $description = null;
+
     public ?string $url = null;
+
     public ?string $type = null;
+
     public ?string $locale = null;
+
     public ?array $alternateLocales = null;
+
     public ?string $siteName = null;
+
     public array|string|null $image = null;
+
     public ?string $imageUrl = null;
+
     public ?int $imageSize = null;
 
     public function generateImageTags(): string
