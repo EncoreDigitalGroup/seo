@@ -5,17 +5,11 @@ namespace EncoreDigitalGroup\SEO\Objects;
 class PageInformation
 {
     public ?string $title = null;
-
     public ?string $subtitle = null;
-
     public ?string $description = null;
-
     public ?string $keywords = null;
-
     public ?string $author = null;
-
     public ?OpenGraph $openGraph;
-
     public ?Twitter $twitter;
 
     public function __construct($title = null, $description = null, $keywords = null, $author = null)
