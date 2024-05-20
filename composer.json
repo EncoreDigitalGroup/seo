@@ -4,7 +4,6 @@
     "type": "library",
     "license": "proprietary",
     "require": {
-        "encoredigitalgroup/stdlib": "self.version",
         "encoredigitalgroup/foundation": "self.version",
         "illuminate/collections": "^10|^11",
         "illuminate/support": "^10|^11"
